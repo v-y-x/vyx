@@ -1,0 +1,78 @@
+body {
+	background: linear-gradient(-45deg,#ff0000,black,#820000);
+	background-size: 400% 400%;
+	animation:gradient 15s  infinite;
+	height: 100vh;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 0%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+#pfp {
+    width: 400px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation:fadein 2s;
+
+}
+p {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    animation:fadein 2s;
+}
+#abouttext {
+    display: none;
+    animation:fadein 2s;
+    text-align: center;
+    margin-top: 100px;
+    color:red;
+
+}
+button {
+    width: 200px;
+    height: 50px;
+    border:none;
+    background-color: black;
+    color:red;
+    border-radius: 50px;
+    position:relative;
+    display: inline-block;
+    margin-right: 70px;
+    margin-left: 70px;
+    animation:fadein 2s;
+    font-family: 'Courier New', Courier, monospace;
+}
+@keyframes fadein {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+button:hover {
+    background-color: darkred;
+    color: black;
+    transition: 0.7s;
+}
+button:not(:hover) {
+    background-color: black;
+    color: red;
+    transition: 0.7s;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
