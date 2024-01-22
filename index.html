@@ -8,16 +8,32 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <p>welcome</p>
+    <h1 id="top">welcome</h1>
     <img id="pfp" src="images/pfp.jpg" alt="">
-    <p>vyx</p>
     <div class="button">
-        <button onclick="displayText()">about</button>
-        <button>music</button>
-        <button>socials</button>
+        <button onclick="removeM(); removeS(); AboutText()">about</button>
+        <button onclick="removeA(); removeS(); MusicText()">music</button>
+        <button onclick="removeA(); removeM(); SocialsText()">socials</button>
     </div>
     <div id="abouttext">
-        test or sumn idk
+        <h1>hello there. im vyx</h1>
+        <p>im a 17 y/o studying computer science. my hobbies are programming, photography, video and photo editing and gaming.</p>
+        <p>list of games that i enjoyed and recommend :</p>
+        <ul>
+            <li>Red Dead Redemption 2</li>
+            <li>ULTRAKILL</li>
+            <li>Grand Theft Auto</li>
+            <li>Half-Life</li>
+        </ul>
+    </div>
+    <div id="musictext">
+        <p>if you are interested, check out my playlists</p>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/38vR3J1XsBgLjjseRpDDBK?utm_source=generator" width="600" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2I2XO4yGEeBUzj60hUMLCq?utm_source=generator" width="600" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7B8puRiedMXeSfbCftwiIO?utm_source=generator&theme=0" width="600" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    <div id="socialstext">
+        <p>three</p>
     </div>
 </body>
 </html>

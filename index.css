@@ -5,6 +5,12 @@ body {
 	height: 100vh;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
+#top {
+    text-align: center;
+    color:red;
+    font-size: 100px;
+    animation:fadein ease 3s
+}
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -22,36 +28,88 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    animation:fadein 2s;
+    animation:fadein ease 3s;
 
 }
 p {
     text-align: center;
     font-size: 50px;
-    color: black;
-    animation:fadein 2s;
+    color: #f69f69;
+    animation:fadein 3s;
+    text-wrap: balance;
 }
 #abouttext {
     display: none;
-    animation:fadein 2s;
+    animation:dropdown ease 2s forwards;
+    transition: 1s;
+    top:-100px;
     text-align: center;
-    margin-top: 100px;
     color:red;
-
+    margin-top: 100px;
+}
+#musictext {    
+    display: none;
+    animation:dropdown ease 2s forwards;
+    transition: 1s;
+    top:-100px;
+    text-align: center;
+    color:red;
+    margin-top: 100px;
+}
+#socialstext {
+    display: none;
+    animation:dropdown ease 2s forwards;
+    transition: 1s;
+    top:-100px;
+    text-align: center;
+    color:red;
+    margin-top: 100px;
+}
+@keyframes dropdown {
+    0% {
+        transform: translateY(0);
+        opacity:0
+    }
+    100% {
+        transform: translateY(40px);
+        opacity:1
+    }
+}
+#socialstext::after {
+    animation : dropout ease 2s forwads;
+}
+#musictext::after {
+    animation : dropout ease 2s forwads;
+}
+#abouttext::after {
+    animation : dropout ease 2s forwads;
+}
+@keyframes dropout {
+    0% {
+        transform: translateY(0);
+        opacity:1
+    }
+    100% {
+        transform: translateY(40px);
+        opacity:0
+    }
 }
 button {
     width: 200px;
     height: 50px;
     border:none;
-    background-color: black;
+    background-color: transparent;
     color:red;
     border-radius: 50px;
     position:relative;
     display: inline-block;
     margin-right: 70px;
     margin-left: 70px;
-    animation:fadein 2s;
+    opacity:0;
+    animation:fadein 3s forwards;
+    animation-delay: 2s;
     font-family: 'Courier New', Courier, monospace;
+    margin-top: 64px;
 }
 @keyframes fadein {
     0% {
@@ -67,7 +125,7 @@ button:hover {
     transition: 0.7s;
 }
 button:not(:hover) {
-    background-color: black;
+    background-color: transparent;
     color: red;
     transition: 0.7s;
 }
@@ -75,4 +133,16 @@ button:not(:hover) {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+ul {
+    text-align: left;
+    font-size: 40px;
+    color: #f69f69;
+    animation:fadein 3s;
+    text-wrap: balance;
+    margin-left: 20px;
+}
+iframe {
+    animation:fadein 3s;
+    margin-bottom: 60px;
 }
