@@ -46,6 +46,7 @@ p {
     text-align: center;
     color:red;
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 #musictext {    
     display: none;
@@ -54,7 +55,7 @@ p {
     top:-100px;
     text-align: center;
     color:red;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 #socialstext {
     display: none;
@@ -62,8 +63,7 @@ p {
     transition: 1s;
     top:-100px;
     text-align: center;
-    color:red;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 @keyframes dropdown {
     0% {
@@ -73,25 +73,6 @@ p {
     100% {
         transform: translateY(40px);
         opacity:1
-    }
-}
-#socialstext::after {
-    animation : dropout ease 2s forwads;
-}
-#musictext::after {
-    animation : dropout ease 2s forwads;
-}
-#abouttext::after {
-    animation : dropout ease 2s forwads;
-}
-@keyframes dropout {
-    0% {
-        transform: translateY(0);
-        opacity:1
-    }
-    100% {
-        transform: translateY(40px);
-        opacity:0
     }
 }
 button {
@@ -134,15 +115,17 @@ button:not(:hover) {
     justify-content: center;
     align-items: center;
 }
-ul {
-    text-align: left;
-    font-size: 40px;
-    color: #f69f69;
-    animation:fadein 3s;
-    text-wrap: balance;
-    margin-left: 20px;
-}
 iframe {
-    animation:fadein 3s;
+    animation:fadein 3s forwards;
+    animation-delay: 1.5s;
     margin-bottom: 60px;
+    opacity: 0;
+}
+.stm {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.mid {
+    padding-left: 25px;
+    padding-right: 25px;
 }
