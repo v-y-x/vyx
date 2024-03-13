@@ -29,7 +29,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     animation:fadein ease 3s;
-
 }
 p {
     text-align: center;
@@ -45,8 +44,8 @@ p {
     top:-100px;
     text-align: center;
     color:red;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 #musictext {    
     display: none;
@@ -55,7 +54,7 @@ p {
     top:-100px;
     text-align: center;
     color:red;
-    margin-top: 50px;
+    padding-top: 50px;
 }
 #socialstext {
     display: none;
@@ -63,7 +62,7 @@ p {
     transition: 1s;
     top:-100px;
     text-align: center;
-    margin-top: 50px;
+    padding-top: 50px;
 }
 @keyframes dropdown {
     0% {
@@ -83,7 +82,6 @@ button {
     color:red;
     border-radius: 50px;
     position:relative;
-    display: inline-block;
     margin-right: 70px;
     margin-left: 70px;
     opacity:0;
@@ -113,7 +111,6 @@ button:not(:hover) {
 .button {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 iframe {
     animation:fadein 3s forwards;
@@ -129,3 +126,36 @@ iframe {
     padding-left: 25px;
     padding-right: 25px;
 }
+/*for mobile*/
+@media screen and (max-width: 720px) {
+    #pfp {
+        width: 50%;
+    }
+    .button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    p {
+        font-size: 2em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    #abouttext {
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    iframe {
+        width: 70%;
+    }
+    #musictext {
+        top: 0px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    #socialstext {
+        padding-bottom: 60px;
+        padding-top: 25px;
+    }
+} 
